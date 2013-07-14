@@ -58,6 +58,9 @@
     <TypeScriptCompile Include="test.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\main.js">
+      <DependentUpon>main.ts</DependentUpon>
+    </Content>
     <Content Include="bootstrap\css\bootstrap-responsive.css" />
     <Content Include="bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
@@ -70,17 +73,15 @@
     <Content Include="css\normalize.css" />
     <Content Include="img\.gitignore" />
     <Content Include="index.html" />
-    <Content Include="js\main.js" />
-    <Content Include="js\main.ts" />
-    <Content Include="js\plugins.js" />
+    <Content Include="app\main.ts" />
     <Content Include="vendor\types\jquery\jquery-tests.ts" />
     <Content Include="vendor\types\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="js\vendor.d.ts" />
-    <TypeScriptCompile Include="js\reference.d.ts" />
-    <Content Include="js\reference.d.js">
+    <TypeScriptCompile Include="app\vendor.d.ts" />
+    <TypeScriptCompile Include="app\reference.d.ts" />
+    <Content Include="app\reference.d.js">
       <DependentUpon>reference.d.ts</DependentUpon>
     </Content>
-    <Content Include="js\vendor.d.js">
+    <Content Include="app\vendor.d.js">
       <DependentUpon>vendor.d.ts</DependentUpon>
     </Content>
     <Content Include="test.js">
@@ -101,11 +102,22 @@
     <Content Include="doc\misc.md" />
     <Content Include="doc\TOC.md" />
     <Content Include="doc\usage.md" />
-    <Content Include="js\main.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="js\controllers\" />
-    <Folder Include="js\directives\" />
+    <Folder Include="app\controllers\" />
+    <Folder Include="app\directives\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <Content Include="app\main.js.map">
+      <DependentUpon>main.ts</DependentUpon>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
 </Project>
