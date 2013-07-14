@@ -17,14 +17,4 @@ var Controllers;
     })();
     Controllers.MainController = MainController;
 })(Controllers || (Controllers = {}));
-var Controllers;
-(function (Controllers) {
-    var TestController = (function () {
-        function TestController($scope) {
-            $scope.name = "test me";
-        }
-        return TestController;
-    })();
-    Controllers.TestController = TestController;
-})(Controllers || (Controllers = {}));
-var app = angular.module('demoApp', []).controller(Controllers);
+//@ sourceMappingURL=MainController.js.map

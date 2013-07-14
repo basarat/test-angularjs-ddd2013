@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html ng-app='demoApp'>
-    <head>
-        <title>Demo App</title>
+<html>
+<head>
+    <title>Demo App</title>
 
-        <script src="vendor/modernizr-2.6.2.min.js"></script>
-        <link rel="stylesheet" href="css/normalize.css">
+    <script src="vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!--Our Styles-->
+    <link rel="stylesheet" href="css/main.css">
 
-        <!--Our Styles-->
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body ng-controller='MainController'>
-
-        <!-- Add your site or application content here -->
-       {{vm.count}}
-
-    </body>
     <!--Scripts-->
     <script src="vendor/jquery-1.9.1.min.js"></script>
     <script src="vendor/angular.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-
     <!--our code -->
     <script src="app/out.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app="demoApp" ng-controller='MainController'>
+
+    <!-- Add your site or application content here -->
+    {{vm.count}}
+    <div ng-controller="TestController">{{name}}</div>
+   
+</body>
 </html>
