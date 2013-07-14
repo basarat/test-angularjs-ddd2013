@@ -1,3 +1,5 @@
+/// <reference path="controllers/controllers.ts" />
+/// <reference path="directives/directives.ts" />
 /// <reference path="reference.ts" />
-var app = angular.module('demoApp', []).controller(Controllers).directive('progressbar', progressbarDirective);
+var app = angular.module('demoApp', ['controllers', 'directives']);
 //@ sourceMappingURL=main.js.map

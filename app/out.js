@@ -27,7 +27,7 @@ var Controllers;
     })();
     Controllers.TestController = TestController;
 })(Controllers || (Controllers = {}));
-var app = angular.module('demoApp', []).controller(Controllers).directive('progressbar', progressbarDirective);
+var directives = angular.module('directives', []);
 function progressbarDirective() {
     return {
         restrict: "EAC",
@@ -35,3 +35,7 @@ function progressbarDirective() {
         replace: true
     };
 }
+
+directives.directive('progressbar', progressbarDirective);
+var app = angular.module('demoApp', ['controllers', 'directives']);
+var controllers = angular.module('controllers', []).controller(Controllers);

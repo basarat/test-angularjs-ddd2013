@@ -1,3 +1,4 @@
+/// <reference path="directives.ts" />
 /// <reference path="../reference.ts" />
 
 function progressbarDirective(): ng.IDirective{
@@ -7,3 +8,5 @@ function progressbarDirective(): ng.IDirective{
         replace:true
     };
 }
+
+directives.directive('progressbar', progressbarDirective);

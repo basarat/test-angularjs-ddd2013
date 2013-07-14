@@ -1,3 +1,4 @@
+/// <reference path="directives.ts" />
 /// <reference path="../reference.ts" />
 function progressbarDirective() {
     return {
@@ -6,4 +7,6 @@ function progressbarDirective() {
         replace: true
     };
 }
+
+directives.directive('progressbar', progressbarDirective);
 //@ sourceMappingURL=progressbarDirective.js.map

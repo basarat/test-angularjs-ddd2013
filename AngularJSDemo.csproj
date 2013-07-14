@@ -59,6 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\controllers\MainController.ts" />
+    <TypeScriptCompile Include="app\controllers\controllers.ts" />
+    <Content Include="app\controllers\controllers.js">
+      <DependentUpon>controllers.ts</DependentUpon>
+    </Content>
     <Content Include="app\controllers\MainController.js">
       <DependentUpon>MainController.ts</DependentUpon>
     </Content>
@@ -67,6 +71,10 @@
       <DependentUpon>TestController.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="app\directives\progressbarDirective.ts" />
+    <TypeScriptCompile Include="app\directives\directives.ts" />
+    <Content Include="app\directives\directives.js">
+      <DependentUpon>directives.ts</DependentUpon>
+    </Content>
     <Content Include="app\directives\progressbarDirective.js">
       <DependentUpon>progressbarDirective.ts</DependentUpon>
     </Content>
@@ -127,6 +135,12 @@
     </Content>
     <Content Include="app\directives\progressbarDirective.js.map">
       <DependentUpon>progressbarDirective.ts</DependentUpon>
+    </Content>
+    <Content Include="app\directives\directives.js.map">
+      <DependentUpon>directives.ts</DependentUpon>
+    </Content>
+    <Content Include="app\controllers\controllers.js.map">
+      <DependentUpon>controllers.ts</DependentUpon>
     </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
