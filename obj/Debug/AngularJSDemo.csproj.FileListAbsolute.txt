@@ -1,0 +1,8 @@
+D:\REPOS\AngularDirectivesDDD\AngularJSDemo\bin\AngularJSDemo.dll
+D:\REPOS\AngularDirectivesDDD\AngularJSDemo\bin\AngularJSDemo.pdb
+D:\REPOS\AngularDirectivesDDD\AngularJSDemo\obj\Debug\AngularJSDemo.dll
+D:\REPOS\AngularDirectivesDDD\AngularJSDemo\obj\Debug\AngularJSDemo.pdb
+D:\REPOS\AngularDirectivesDDD\bin\AngularJSDemo.dll
+D:\REPOS\AngularDirectivesDDD\bin\AngularJSDemo.pdb
+D:\REPOS\AngularDirectivesDDD\obj\Debug\AngularJSDemo.dll
+D:\REPOS\AngularDirectivesDDD\obj\Debug\AngularJSDemo.pdb

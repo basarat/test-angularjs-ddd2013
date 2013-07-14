@@ -1,3 +1,4 @@
+/// <reference path="reference.d.ts" />
 angular.module('demoApp', []);
 
 var MainController = (function () {

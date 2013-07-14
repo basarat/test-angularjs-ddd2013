@@ -1,4 +1,5 @@
-declare var angular;
+/// <reference path="reference.d.ts" />
+
 
 angular.module('demoApp',[]);
 
