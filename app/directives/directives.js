@@ -7,7 +7,7 @@ function progressbarDirective($compile) {
         replace: true,
         compile: function (element, attrs) {
             var content = '<div>inside:{{progress}}</div>';
-            element.find('.well').append(content);
+            element.find('.content').append(content);
 
             return function (scope, element, attrs) {
             };
