@@ -31,7 +31,7 @@ var app = angular.module('demoApp', ['controllers', 'directives']);
 function progressbarDirective() {
     return {
         restrict: "EAC",
-        template: '<div>progress bar demo</div>',
+        templateUrl: 'app/directives/progressbar.html',
         replace: true
     };
 }

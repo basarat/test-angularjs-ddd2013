@@ -1,7 +1,7 @@
 
 module Controllers {
 
-    interface IMainController {
+    export interface IMainController {
         count: number;
         inc: () => void;
         dec: () => void;
