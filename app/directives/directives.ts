@@ -6,6 +6,7 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
         //template: '<div>progress bar demo</div>',
         templateUrl: 'app/directives/progressbar.html',
         replace: true,
+        transclude: true,
         compile: (element, attrs) => {
             var content = '<div>inside:{{progress}}</div>';
             element.find('.content').append(content);
