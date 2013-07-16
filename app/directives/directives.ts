@@ -1,11 +1,16 @@
 /// <reference path="../reference.ts" />
 
-function progressbarDirective(): ng.IDirective {
+function progressbarDirective($compile:ng.ICompileService): ng.IDirective {
     return {
         restrict: "EAC",
         //template: '<div>progress bar demo</div>',
         templateUrl: 'app/directives/progressbar.html',
-        replace: true
+        replace: true,
+        link: (scope, element: JQuery, attrs) => {
+            var content = '<div>inside:{{progress}}</div>'
+            var compiled = $compile(content)(scope);
+            element.find('button').after(compiled);
+        }
     };
 }
 

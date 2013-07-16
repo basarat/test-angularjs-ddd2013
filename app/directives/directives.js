@@ -1,10 +1,15 @@
 /// <reference path="../reference.ts" />
-function progressbarDirective() {
+function progressbarDirective($compile) {
     return {
         restrict: "EAC",
         //template: '<div>progress bar demo</div>',
         templateUrl: 'app/directives/progressbar.html',
-        replace: true
+        replace: true,
+        link: function (scope, element, attrs) {
+            var content = '<div>inside:{{progress}}</div>';
+            var compiled = $compile(content)(scope);
+            element.find('button').after(compiled);
+        }
     };
 }
 

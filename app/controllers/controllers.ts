@@ -1,7 +1,7 @@
 
 module Controllers {
 
-    export class MainController implements IMainController {
+    export class MainController {
 
         progress: number[] = [1,90,60];
 
