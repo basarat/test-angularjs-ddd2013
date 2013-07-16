@@ -5,10 +5,12 @@ function progressbarDirective($compile) {
         //template: '<div>progress bar demo</div>',
         templateUrl: 'app/directives/progressbar.html',
         replace: true,
-        link: function (scope, element, attrs) {
+        compile: function (element, attrs) {
             var content = '<div>inside:{{progress}}</div>';
-            var compiled = $compile(content)(scope);
-            element.find('button').after(compiled);
+            element.find('.well').append(content);
+
+            return function (scope, element, attrs) {
+            };
         }
     };
 }
