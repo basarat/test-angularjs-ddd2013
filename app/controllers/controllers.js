@@ -2,16 +2,9 @@ var Controllers;
 (function (Controllers) {
     var MainController = (function () {
         function MainController($scope) {
-            this.count = 12;
-            this.message = "some message";
+            this.progress = [1, 90, 60];
             $scope.vm = this;
         }
-        MainController.prototype.inc = function () {
-            this.count++;
-        };
-        MainController.prototype.dec = function () {
-            this.count--;
-        };
         MainController.$inject = ['$scope'];
         return MainController;
     })();
