@@ -1,1 +1,8 @@
-﻿<div>from template: {{progress}}</div>
+﻿<div>
+    
+    <div class="progress progress-striped active">
+        <div class="bar" style="width: {{progress}}%;"></div>
+    </div>
+    <button class="btn" ng-click="progress = progress +10">Increase</button>
+
+</div>
