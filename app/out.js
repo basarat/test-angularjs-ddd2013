@@ -16,9 +16,7 @@ var Controllers;
         return MainController;
     })();
     Controllers.MainController = MainController;
-})(Controllers || (Controllers = {}));
-var Controllers;
-(function (Controllers) {
+
     var TestController = (function () {
         function TestController($scope) {
             $scope.name = "test me";
@@ -27,7 +25,9 @@ var Controllers;
     })();
     Controllers.TestController = TestController;
 })(Controllers || (Controllers = {}));
-var directives = angular.module('directives', []);
+
+var controllers = angular.module('controllers', []).controller(Controllers);
+var app = angular.module('demoApp', ['controllers', 'directives']);
 function progressbarDirective() {
     return {
         restrict: "EAC",
@@ -36,6 +36,4 @@ function progressbarDirective() {
     };
 }
 
-directives.directive('progressbar', progressbarDirective);
-var app = angular.module('demoApp', ['controllers', 'directives']);
-var controllers = angular.module('controllers', []).controller(Controllers);
+var directives = angular.module('directives', []).directive('progressbar', progressbarDirective);
