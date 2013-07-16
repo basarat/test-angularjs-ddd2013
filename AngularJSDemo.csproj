@@ -66,6 +66,7 @@
     <Content Include="app\directives\directives.js">
       <DependentUpon>directives.ts</DependentUpon>
     </Content>
+    <Content Include="app\directives\progressbar.html" />
     <Content Include="app\main.js">
       <DependentUpon>main.ts</DependentUpon>
     </Content>
