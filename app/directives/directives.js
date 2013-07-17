@@ -8,7 +8,8 @@ function progressbarDirective($compile) {
         transclude: true,
         scope: {
             progress: '=',
-            click: '&'
+            click: '&',
+            msg: '@'
         },
         compile: function (element, attrs) {
             var content = '<div>inside:{{progress}}</div>';

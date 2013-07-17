@@ -1,3 +1,4 @@
+/// <reference path="../vendor.d.ts" />
 var Controllers;
 (function (Controllers) {
     var MainController = (function () {
