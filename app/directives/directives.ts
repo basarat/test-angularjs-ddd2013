@@ -10,7 +10,7 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
         scope: {
             progress: '=',
             click: '&',
-            msg:'@',
+            msg:'=',
         },
         compile: (element, attrs) => {
             var content = '<div>inside:{{progress}}</div>';
