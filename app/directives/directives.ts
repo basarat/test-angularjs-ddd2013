@@ -7,11 +7,14 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
         templateUrl: 'app/directives/progressbar.html',
         replace: true,
         transclude: true,
+        scope: {
+            progress: '=progress'
+        },
         compile: (element, attrs) => {
             var content = '<div>inside:{{progress}}</div>';
             element.find('.content').append(content);
 
-            return (scope, element: JQuery, attrs) => {            
+            return (scope, element: JQuery, attrs) => {                        
             };
         }
     };

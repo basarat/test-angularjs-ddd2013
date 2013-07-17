@@ -6,6 +6,9 @@ function progressbarDirective($compile) {
         templateUrl: 'app/directives/progressbar.html',
         replace: true,
         transclude: true,
+        scope: {
+            progress: '=progress'
+        },
         compile: function (element, attrs) {
             var content = '<div>inside:{{progress}}</div>';
             element.find('.content').append(content);
