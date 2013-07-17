@@ -7,7 +7,8 @@ function progressbarDirective($compile) {
         replace: true,
         transclude: true,
         scope: {
-            progress: '='
+            progress: '=',
+            click: '&'
         },
         compile: function (element, attrs) {
             var content = '<div>inside:{{progress}}</div>';

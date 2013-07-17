@@ -30,9 +30,10 @@
 
     <div ng-repeat="progressval in vm.progress">
         <h1>{{progressval}}</h1>
-        <progressbar progress="50">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
+        <progressbar progress="progressval" click="progressval = progressval +10;">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
     </div>
-
+    
+    
 
     <!-- AC demo -->
     <!--<div progressbar></div>
