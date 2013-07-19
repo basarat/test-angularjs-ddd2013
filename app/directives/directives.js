@@ -21,6 +21,7 @@ function progressbarDirective($compile) {
                     if (scope.value != val) {
                         scope.$apply(function () {
                             scope.value = val;
+                            scope.change();
                         });
                     }
                 });
