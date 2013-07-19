@@ -8,6 +8,9 @@ function progressbarDirective() {
             progress: "=",
             msg: "@",
             click: "&"
+        },
+        link: function (scope, element, attrs) {
+            element.find('.btn').after('<div>{{msg}}</div>');
         }
     };
 }

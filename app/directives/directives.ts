@@ -2,13 +2,16 @@
 
 function progressbarDirective(): ng.IDirective {
     return {
-        restrict: 'EAC',        
+        restrict: 'EAC',
         templateUrl: 'app/directives/progressbar.html',
         transclude: true,
         scope: {
             progress: "=",
             msg: "@",
             click: "&"
+        },
+        link: (scope, element:JQuery, attrs) => {
+            element.find('.btn').after('<div>{{msg}}</div>');
         },
     }
 }
