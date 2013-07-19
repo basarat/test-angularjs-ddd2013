@@ -19,7 +19,9 @@ function progressbarDirective($compile) {
                 element.find('input').on('keyup', function () {
                     var val = $(this).val();
                     if (scope.value != val) {
-                        scope.value = val;
+                        scope.$apply(function () {
+                            scope.value = val;
+                        });
                     }
                 });
             };

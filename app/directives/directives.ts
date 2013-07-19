@@ -1,11 +1,11 @@
 /// <reference path="../reference.ts" />
 
-interface X extends ng.IScope{
+interface X extends ng.IScope {
     value: any;
     change: Function;
 }
 
-function progressbarDirective($compile:ng.ICompileService): ng.IDirective {
+function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
     return {
         restrict: 'EAC',
         templateUrl: 'app/directives/progressbar.html',
@@ -19,13 +19,15 @@ function progressbarDirective($compile:ng.ICompileService): ng.IDirective {
         },
         compile: (element, attrs) => {
             element.find('.btn').after('<div>{{msg}}</div>');
-            
-            return (scope:X, element: JQuery, attrs) => {
+
+            return (scope: X, element: JQuery, attrs) => {
                 // view -> vm 
-                element.find('input').on('keyup', function() {
-                    var val = $(this).val(); 
+                element.find('input').on('keyup', function () {
+                    var val = $(this).val();
                     if (scope.value != val) {
-                        scope.value = val; 
+                        scope.$apply(() => {
+                            scope.value = val;
+                        })
                     }
                 });
             };
