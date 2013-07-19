@@ -30,6 +30,11 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
                         })
                     }
                 });
+
+                // vm -> view 
+                scope.$watch('value', () => {
+                    element.find('input').val(scope.value);
+                });
             };
         }
     }

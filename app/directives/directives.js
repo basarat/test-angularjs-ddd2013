@@ -24,6 +24,11 @@ function progressbarDirective($compile) {
                         });
                     }
                 });
+
+                // vm -> view
+                scope.$watch('value', function () {
+                    element.find('input').val(scope.value);
+                });
             };
         }
     };
