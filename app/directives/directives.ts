@@ -8,7 +8,9 @@ function progressbarDirective($compile:ng.ICompileService): ng.IDirective {
         scope: {
             progress: "=",
             msg: "@",
-            click: "&"
+            click: "&",
+            value: "=",
+            change: "&"
         },
         compile: (element, attrs) => {
             element.find('.btn').after('<div>{{msg}}</div>');

@@ -7,7 +7,9 @@ function progressbarDirective($compile) {
         scope: {
             progress: "=",
             msg: "@",
-            click: "&"
+            click: "&",
+            value: "=",
+            change: "&"
         },
         compile: function (element, attrs) {
             element.find('.btn').after('<div>{{msg}}</div>');
