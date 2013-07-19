@@ -28,6 +28,9 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
                 });
 
                 // vm -> view 
+                scope.$watch('value', (newval, oldval) => {
+                    $('input').val(scope.value);
+                });
             };
         }
     };

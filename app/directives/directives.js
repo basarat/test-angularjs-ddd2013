@@ -25,6 +25,11 @@ function progressbarDirective($compile) {
                         scope.value = $(_this).val();
                     });
                 });
+
+                // vm -> view
+                scope.$watch('value', function (newval, oldval) {
+                    $('input').val(scope.value);
+                });
             };
         }
     };
