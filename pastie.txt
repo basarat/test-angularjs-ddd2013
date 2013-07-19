@@ -1,0 +1,73 @@
+<div ng-repeat="progressval in vm.progress">
+        <h1>{{progressval}}</h1>
+        <progressbar progress="progressval" click="progressval = progressval +10;" msg="'Hey there'" value="vm.theval" change="vm.count=vm.theval">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
+    </div>
+    
+   
+    <!-- AC demo -->
+    <!--<div progressbar></div>
+    <div class="progressbar"> </div>-->
+	
+
+
+
+	
+	
+<div class="well">
+    
+    <div class="progress progress-striped active">
+        <div class="bar" style="width: {{progress}}%;"></div>
+    </div>
+    <button class="btn" ng-click="click()">Increase</button>
+    <div class="content"></div>
+    <div>{{msg}}</div>
+    <input/> 
+    <div ng-transclude></div>
+</div>
+
+
+
+
+function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
+    return {
+        restrict: "EAC",
+        //template: '<div>progress bar demo</div>',
+        templateUrl: 'app/directives/progressbar.html',
+        replace: true,
+        transclude: true,
+        scope: {
+            progress: '=',
+            click: '&',
+            msg: '=',
+            value: '=',
+            change: '&'
+        },
+        compile: (element, attrs) => {
+            var content = '<div>inside:{{progress}}</div>';
+            element.find('.content').append(content);
+
+            return (scope, element: JQuery, attrs) => {
+
+                // view -> vm 
+                $('input').on('keyup', function () {
+                    var newval = $(this).val();
+                    if (scope.value != newval) {
+                        scope.$apply(() => {
+                            scope.value = newval;
+                        });
+                        scope.$apply(() => {
+                            scope.change();
+                        });
+                    }                
+                });
+
+                // vm -> view 
+                scope.$watch('value', (newval, oldval) => {
+                    $('input').val(scope.value);
+                });
+            };
+        }
+    };
+}
+
+var directives = angular.module('directives', []).directive('progressbar', progressbarDirective);

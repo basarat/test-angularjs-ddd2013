@@ -4,9 +4,3 @@
 
 
 var app = angular.module('demoApp', ['controllers', 'directives']);
-
-/// Debug utilities:
-// angular element scope
-function aes(item) {
-    return (<any>angular.element(item)).scope();
-}

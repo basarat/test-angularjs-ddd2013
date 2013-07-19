@@ -1,6 +1,5 @@
 Lets start with a very simple angularjs application 
 
-
 The great thing is that it sets up a live binding for you (click button) 
 
 now compiling within the linking function has performance implications. If you want something that is only compiled once we have a compile function for that. The only difference is that we do not have access to the scope 

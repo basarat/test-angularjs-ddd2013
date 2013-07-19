@@ -25,19 +25,9 @@
     <!-- Add your site or application content here -->
     <div class="well">
         <h1>Current Count: {{vm.count}}</h1>
-        <h2>Current value: {{vm.theval}}</h2>
+        <h2>Current Value: {{vm.theval}}</h2>
     </div>
-    
 
-    <div ng-repeat="progressval in vm.progress">
-        <h1>{{progressval}}</h1>
-        <progressbar progress="progressval" click="progressval = progressval +10;" msg="'Hey there'" value="vm.theval" change="vm.count=vm.theval">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
-    </div>
-    
-   
-    <!-- AC demo -->
-    <!--<div progressbar></div>
-    <div class="progressbar"> </div>-->
 
 </body>
 </html>
