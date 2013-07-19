@@ -26,9 +26,12 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
                     var val = $(this).val();
                     if (scope.value != val) {
                         scope.$apply(() => {
-                            scope.value = val;
-                            scope.change();
+                            scope.value = val;                            
                         })
+
+                        scope.$apply(() => {
+                            scope.change();
+                        });
                     }
                 });
 
