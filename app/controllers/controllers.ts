@@ -3,7 +3,7 @@
 
 class MainController {
 
-    progress: number[] = [1, 90, 60];
+    progress: number[] = [1, 20, 60];
     count: number = 0;
     message: string = "Some message";
     

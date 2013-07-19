@@ -27,9 +27,12 @@
         <h1>Current Count: {{vm.count}}</h1>
         <h2>Current Value: {{vm.theval}}</h2>
     </div>
-    
-    <progressbar></progressbar>
-    
+
+    <div ng-repeat="progress in vm.progress">
+        <h3>{{progress}}</h3>
+        <progressbar></progressbar>
+    </div>
+
 
 </body>
 </html>
