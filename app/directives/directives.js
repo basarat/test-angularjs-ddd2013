@@ -1,5 +1,5 @@
-/// <reference path="../reference.ts" />
 function progressbarDirective($compile) {
+    var _this = this;
     return {
         restrict: 'EAC',
         templateUrl: 'app/directives/progressbar.html',
@@ -15,6 +15,13 @@ function progressbarDirective($compile) {
             element.find('.btn').after('<div>{{msg}}</div>');
 
             return function (scope, element, attrs) {
+                // view -> vm
+                element.find('input').on('keyup', function () {
+                    var val = $(this).val();
+                    if (scope.value != val) {
+                        scope.value = val;
+                    }
+                });
             };
         }
     };
