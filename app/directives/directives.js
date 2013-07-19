@@ -5,7 +5,8 @@ function progressbarDirective() {
         templateUrl: 'app/directives/progressbar.html',
         scope: {
             progress: "=",
-            msg: "@"
+            msg: "@",
+            click: "&"
         }
     };
 }

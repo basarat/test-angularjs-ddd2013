@@ -6,7 +6,8 @@ function progressbarDirective(): ng.IDirective {
         templateUrl: 'app/directives/progressbar.html' ,
         scope: {
             progress: "=",
-            msg: "@"
+            msg: "@",
+            click: "&"
         }
     }
 }
