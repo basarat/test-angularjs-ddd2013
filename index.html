@@ -23,12 +23,15 @@
 <body ng-app="demoApp" ng-controller='MainController'>
 
     <!-- Add your site or application content here -->
-    <h1 class="well">Current Count: {{vm.count}}</h1>
-    <h2>Current value: {{vm.theval}}</h2>
+    <div class="well">
+        <h1>Current Count: {{vm.count}}</h1>
+        <h2>Current value: {{vm.theval}}</h2>
+    </div>
+    
 
     <div ng-repeat="progressval in vm.progress">
         <h1>{{progressval}}</h1>
-        <progressbar progress="progressval" click="progressval = progressval +10;" msg="'asdf'" value="vm.theval" change="vm.count=vm.theval">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
+        <progressbar progress="progressval" click="progressval = progressval +10;" msg="'Hey there'" value="vm.theval" change="vm.count=vm.theval">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
     </div>
     
    

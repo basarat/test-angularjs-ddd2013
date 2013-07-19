@@ -1,16 +1,16 @@
 /// <reference path="../vendor.d.ts" />
 
-module Controllers {
 
-    export class MainController {
+class MainController {
 
-        progress: number[] = [1, 90, 60];        
-        count: number = 0;
-                
-        constructor($scope) {
-            $scope.vm = this;
-        }    
-    }    
+    progress: number[] = [1, 90, 60];
+    count: number = 0;
+    message: string = "Some message";
+    
+    constructor($scope) {
+        $scope.vm = this;
+    }
 }
 
-var controllers = angular.module('controllers', []).controller(Controllers);
+
+angular.module('controllers', []).controller('MainController', MainController);
