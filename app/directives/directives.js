@@ -2,8 +2,7 @@
 function progressbarDirective() {
     return {
         restrict: 'EAC',
-        replace: true,
-        template: '<div> Hey there</div>'
+        templateUrl: 'app/directives/progressbar.html'
     };
 }
 

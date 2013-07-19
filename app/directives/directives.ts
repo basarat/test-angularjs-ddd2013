@@ -2,9 +2,8 @@
 
 function progressbarDirective(): ng.IDirective {
     return {
-        restrict: 'EAC',
-        replace: true,
-        template:'<div> Hey there</div>' 
+        restrict: 'EAC',        
+        templateUrl:'app/directives/progressbar.html' 
     }
 }
 
