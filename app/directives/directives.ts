@@ -1,3 +1,10 @@
 /// <reference path="../reference.ts" />
 
-var directives = angular.module('directives', []);
+function progressbarDirective(): ng.IDirective {
+    return {
+        restrict: 'EAC',
+        template:'<div> Hey there</div>' 
+    }
+}
+
+var directives = angular.module('directives', []).directive('progressbar', progressbarDirective);;
