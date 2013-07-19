@@ -7,7 +7,6 @@ var Controllers;
             this.count = 0;
             $scope.vm = this;
         }
-        MainController.$inject = ['$scope'];
         return MainController;
     })();
     Controllers.MainController = MainController;
