@@ -4,6 +4,7 @@ var Controllers;
     var MainController = (function () {
         function MainController($scope) {
             this.progress = [1, 90, 60];
+            this.count = 0;
             $scope.vm = this;
         }
         MainController.$inject = ['$scope'];

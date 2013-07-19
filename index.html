@@ -24,17 +24,15 @@
 <body ng-app="demoApp" ng-controller='MainController'>
 
     <!-- Add your site or application content here -->
-    {{vm.count}}
+    <h1 class="well">Current Count: {{vm.count}}</h1>
    
-    <div ng-controller="TestController">{{name}}</div>
-
     <div ng-repeat="progressval in vm.progress">
         <h1>{{progressval}}</h1>
-        <progressbar progress="progressval" click="progressval = progressval +10;" msg="'asdf'">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
+        <h2>Current value: {{theval}}</h2>
+        <progressbar progress="progressval" click="progressval = progressval +10;" msg="'asdf'" value="theval" change="vm.count=vm.count+1">I want to talk {{'2+progress='+(2+progressval)}}</progressbar>
     </div>
     
-    
-
+   
     <!-- AC demo -->
     <!--<div progressbar></div>
     <div class="progressbar"> </div>-->
