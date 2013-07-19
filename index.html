@@ -31,7 +31,7 @@
     <div ng-repeat="progressval in vm.progress">
         <h3>{{progressval}}</h3>
         <progressbar progress="progressval" msg ="{{vm.message}}" click="progressval = progressval + 10" 
-                     value="vm.value" change="vm.count = vm.count+1">
+                     value="vm.value" change="vm.count = vm.value">
             An element inside : {{progressval}}
         </progressbar>
     </div>
