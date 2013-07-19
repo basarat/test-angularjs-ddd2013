@@ -1,6 +1,5 @@
 /// <reference path="../reference.ts" />
 function progressbarDirective($compile) {
-    var _this = this;
     return {
         restrict: "EAC",
         //template: '<div>progress bar demo</div>',
@@ -21,7 +20,10 @@ function progressbarDirective($compile) {
             return function (scope, element, attrs) {
                 // view -> vm
                 $('input').on('keypress keydown keyup textinput', function () {
-                    scope.value = $(this).val();
+                    var _this = this;
+                    scope.$apply(function () {
+                        scope.value = $(_this).val();
+                    });
                 });
             };
         }

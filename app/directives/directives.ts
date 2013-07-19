@@ -21,8 +21,10 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
             return (scope, element: JQuery, attrs) => {
 
                 // view -> vm 
-                $('input').on('keypress keydown keyup textinput', function() {
-                    scope.value = $(this).val();
+                $('input').on('keypress keydown keyup textinput', function () {
+                    scope.$apply(() => {
+                        scope.value = $(this).val();
+                    });
                 });
 
                 // vm -> view 
