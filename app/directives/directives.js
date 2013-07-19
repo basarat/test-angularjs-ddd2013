@@ -19,10 +19,14 @@ function progressbarDirective($compile) {
 
             return function (scope, element, attrs) {
                 // view -> vm
-                $('input').on('keypress keydown keyup textinput', function () {
+                $('input').on('keyup', function () {
                     var _this = this;
                     scope.$apply(function () {
-                        scope.value = $(_this).val();
+                        var newval = $(_this).val();
+                        if (scope.value != newval) {
+                            scope.value = newval;
+                            scope.change();
+                        }
                     });
                 });
 
