@@ -11,7 +11,6 @@ function progressbarDirective($compile) {
         },
         compile: function (element, attrs) {
             element.find('.btn').after('<div>{{msg}}</div>');
-            console.log('here');
 
             return function (scope, element, attrs) {
             };

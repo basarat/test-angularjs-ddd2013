@@ -12,8 +12,7 @@ function progressbarDirective($compile:ng.ICompileService): ng.IDirective {
         },
         compile: (element, attrs) => {
             element.find('.btn').after('<div>{{msg}}</div>');
-            console.log('here');
-
+            
             return (scope, element: JQuery, attrs) => {
                 
             };
