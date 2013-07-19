@@ -9,11 +9,12 @@ function progressbarDirective($compile) {
             msg: "@",
             click: "&"
         },
-        link: function (scope, element, attrs) {
-            var compiled = $compile('<div>{{msg}}</div>');
-            var linked = compiled(scope);
-            element.find('.btn').after(linked);
+        compile: function (element, attrs) {
+            element.find('.btn').after('<div>{{msg}}</div>');
             console.log('here');
+
+            return function (scope, element, attrs) {
+            };
         }
     };
 }

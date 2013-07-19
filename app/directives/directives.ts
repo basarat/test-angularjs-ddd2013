@@ -10,12 +10,14 @@ function progressbarDirective($compile:ng.ICompileService): ng.IDirective {
             msg: "@",
             click: "&"
         },
-        link: (scope, element: JQuery, attrs) => {
-            var compiled = $compile('<div>{{msg}}</div>');
-            var linked = compiled(scope);
-            element.find('.btn').after(linked);
+        compile: (element, attrs) => {
+            element.find('.btn').after('<div>{{msg}}</div>');
             console.log('here');
-        },
+
+            return (scope, element: JQuery, attrs) => {
+                
+            };
+        }
     }
 }
 
