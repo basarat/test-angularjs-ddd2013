@@ -11,14 +11,6 @@ var Controllers;
         return MainController;
     })();
     Controllers.MainController = MainController;
-
-    var TestController = (function () {
-        function TestController($scope) {
-            $scope.name = "test me";
-        }
-        return TestController;
-    })();
-    Controllers.TestController = TestController;
 })(Controllers || (Controllers = {}));
 
 var controllers = angular.module('controllers', []).controller(Controllers);
