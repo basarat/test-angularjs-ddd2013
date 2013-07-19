@@ -3,7 +3,10 @@
 function progressbarDirective(): ng.IDirective {
     return {
         restrict: 'EAC',        
-        templateUrl:'app/directives/progressbar.html' 
+        templateUrl: 'app/directives/progressbar.html' ,
+        scope: {
+            progress:"="
+        }
     }
 }
 
