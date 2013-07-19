@@ -25,12 +25,12 @@
     <!-- Add your site or application content here -->
     <div class="well">
         <h1>Current Count: {{vm.count}}</h1>
-        <h2>Current Value: {{vm.theval}}</h2>
+        <h2>Current Value: {{vm.value}}</h2>
     </div>
 
     <div ng-repeat="progressval in vm.progress">
         <h3>{{progressval}}</h3>
-        <progressbar progress="progressval"></progressbar>
+        <progressbar progress="progressval" msg ="a message"></progressbar>
     </div>
 
 </body>

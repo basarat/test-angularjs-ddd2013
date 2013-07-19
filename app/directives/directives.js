@@ -4,7 +4,8 @@ function progressbarDirective() {
         restrict: 'EAC',
         templateUrl: 'app/directives/progressbar.html',
         scope: {
-            progress: "="
+            progress: "=",
+            msg: "@"
         }
     };
 }
