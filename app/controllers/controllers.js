@@ -6,6 +6,9 @@ var MainController = (function () {
         this.message = "Some message";
         $scope.vm = this;
     }
+    MainController.prototype.change = function () {
+        this.count = this.count + 1;
+    };
     return MainController;
 })();
 

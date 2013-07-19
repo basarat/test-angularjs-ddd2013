@@ -10,6 +10,10 @@ class MainController {
     constructor($scope) {
         $scope.vm = this;
     }
+
+    change() {
+        this.count = this.count + 1; 
+    }
 }
 
 
