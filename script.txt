@@ -1,3 +1,5 @@
+Lets start with a very simple angularjs application 
+
 
 The great thing is that it sets up a live binding for you (click button) 
 
