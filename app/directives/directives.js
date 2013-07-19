@@ -3,6 +3,7 @@ function progressbarDirective() {
     return {
         restrict: 'EAC',
         templateUrl: 'app/directives/progressbar.html',
+        transclude: true,
         scope: {
             progress: "=",
             msg: "@",
