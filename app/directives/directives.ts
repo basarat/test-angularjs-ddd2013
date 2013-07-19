@@ -1,6 +1,6 @@
 /// <reference path="../reference.ts" />
 
-function progressbarDirective(): ng.IDirective {
+function progressbarDirective($compile:ng.ICompileService): ng.IDirective {
     return {
         restrict: 'EAC',
         templateUrl: 'app/directives/progressbar.html',
@@ -10,8 +10,10 @@ function progressbarDirective(): ng.IDirective {
             msg: "@",
             click: "&"
         },
-        link: (scope, element:JQuery, attrs) => {
-            element.find('.btn').after('<div>{{msg}}</div>');
+        link: (scope, element: JQuery, attrs) => {
+            var compiled = $compile('<div>{{msg}}</div>');
+            var linked = compiled(scope);
+            element.find('.btn').after(linked);
         },
     }
 }

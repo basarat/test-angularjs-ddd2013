@@ -1,5 +1,5 @@
 /// <reference path="../reference.ts" />
-function progressbarDirective() {
+function progressbarDirective($compile) {
     return {
         restrict: 'EAC',
         templateUrl: 'app/directives/progressbar.html',
@@ -10,7 +10,9 @@ function progressbarDirective() {
             click: "&"
         },
         link: function (scope, element, attrs) {
-            element.find('.btn').after('<div>{{msg}}</div>');
+            var compiled = $compile('<div>{{msg}}</div>');
+            var linked = compiled(scope);
+            element.find('.btn').after(linked);
         }
     };
 }
