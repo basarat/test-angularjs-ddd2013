@@ -18,10 +18,14 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
             var content = '<div>inside:{{progress}}</div>';
             element.find('.content').append(content);
 
-            return (scope:ng.IScope, element: JQuery, attrs) => {                        
+            return (scope, element: JQuery, attrs) => {
 
-                
+                // view -> vm 
+                $('input').on('keypress keydown keyup textinput', function() {
+                    scope.value = $(this).val();
+                });
 
+                // vm -> view 
             };
         }
     };
