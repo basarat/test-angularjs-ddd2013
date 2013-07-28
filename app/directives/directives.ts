@@ -33,7 +33,7 @@ function progressbarDirective($compile: ng.ICompileService): ng.IDirective {
                             scope.change();
                         });
                     }
-                });
+                }); 
 
                 // vm -> view 
                 scope.$watch('value', () => {

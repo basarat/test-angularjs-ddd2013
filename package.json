@@ -1,12 +1,10 @@
 {
-  "name": "",
-  "version": "0.0.0",  
-  "dependencies": {},
-  "devDependencies": {  
-    "matchdep": "0.1.1",
-    "grunt-contrib-watch": "0.4.4",
-	"grunt-contrib-clean": "0.4.1",
-    "grunt-ts": "=0.4.3"
+   "name": "",
+   "version": "0.0.0",  
+   "dependencies": {},
+   "devDependencies": {  
+	"grunt" : "=0.4.1",
+	"grunt-ts": "=0.6.7"
   },
   "engines": {
     "node": ">=0.8.0"
