@@ -6,14 +6,9 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         ts: {
-            normal: {
-                src: ["app/**/*.ts"],                
-                reference: "app/", // If specified, generate a reference.ts file at this place, Automatically manages relative file paths                
-                out: 'app/out.js' // If specified, generate a out.js file which is the merged typescript output
-            },
             awesome: {
                 src: ["app/**/*.ts"],                
-                reference: "app/", // If specified, generate a reference.ts file at this place, Automatically manages relative file paths                
+                reference: "app/reference.ts", // If specified this file is maintained by ts
                 out: 'app/out.js', // If specified, generate a out.js file which is the merged typescript output
                 watch: 'app/'
             }
