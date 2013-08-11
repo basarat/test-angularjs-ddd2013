@@ -1,9 +1,1 @@
-module progressbar { export var html =  '<div class="well"> \n' +
-    '    <div class="progress progress-striped progress-active">\n' +
-    '        <div class="bar" style="width: {{progress}}%"></div>\n' +
-    '    </div>\n' +
-    '    <div class="btn" ng-click="click()">Click me</div>\n' +
-    '    <div ng-transclude></div>\n' +
-    '    <input/>\n' +
-    '</div>\n' +
-    '' } 
+module progressbar { export var html =  '<div class="well">     <div class="progress progress-striped progress-active">        <div class="bar" style="width: {{progress}}%"></div>    </div>    <div class="btn" ng-click="click()">Click me</div>    <div ng-transclude></div>    <input/></div>' } 
