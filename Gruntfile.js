@@ -7,10 +7,11 @@ module.exports = function (grunt) {
     grunt.initConfig({
         ts: {
             awesome: {
-                src: ["app/**/*.ts"],                
+                src: ["app/**/*.ts"],
+                html: ["app/**/*.html"],                
                 reference: "app/reference.ts", // If specified this file is maintained by ts
                 out: 'app/out.js', // If specified, generate a out.js file which is the merged typescript output
-                watch: 'app/'
+                watch: 'app'
             }
         },
     });    

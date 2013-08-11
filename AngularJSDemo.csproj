@@ -63,15 +63,34 @@
       <DependentUpon>controllers.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="app\directives\directives.ts" />
+    <TypeScriptCompile Include="app\controllers\MainController.ts" />
+    <Content Include="app\controllers\MainController.js">
+      <DependentUpon>MainController.ts</DependentUpon>
+    </Content>
     <Content Include="app\directives\directives.js">
       <DependentUpon>directives.ts</DependentUpon>
     </Content>
     <Content Include="app\directives\progressbar.html" />
+    <TypeScriptCompile Include="app\directives\progressbarDirective.ts" />
+    <Content Include="app\directives\progressbarDirective.js">
+      <DependentUpon>progressbarDirective.ts</DependentUpon>
+    </Content>
     <Content Include="app\main.js">
       <DependentUpon>main.ts</DependentUpon>
     </Content>
     <Content Include="app\out.js" />
+    <Content Include="app\reference.js">
+      <DependentUpon>reference.ts</DependentUpon>
+    </Content>
     <Content Include="app\reference.ts" />
+    <TypeScriptCompile Include="app\services\LogService.ts" />
+    <Content Include="app\services\LogService.js">
+      <DependentUpon>LogService.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="app\services\services.ts" />
+    <Content Include="app\services\services.js">
+      <DependentUpon>services.ts</DependentUpon>
+    </Content>
     <Content Include="bootstrap\css\bootstrap-responsive.css" />
     <Content Include="bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
@@ -123,6 +142,21 @@
     </Content>
     <Content Include="app\controllers\controllers.js.map">
       <DependentUpon>controllers.ts</DependentUpon>
+    </Content>
+    <Content Include="app\reference.js.map">
+      <DependentUpon>reference.ts</DependentUpon>
+    </Content>
+    <Content Include="app\controllers\MainController.js.map">
+      <DependentUpon>MainController.ts</DependentUpon>
+    </Content>
+    <Content Include="app\directives\progressbarDirective.js.map">
+      <DependentUpon>progressbarDirective.ts</DependentUpon>
+    </Content>
+    <Content Include="app\services\LogService.js.map">
+      <DependentUpon>LogService.ts</DependentUpon>
+    </Content>
+    <Content Include="app\services\services.js.map">
+      <DependentUpon>services.ts</DependentUpon>
     </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

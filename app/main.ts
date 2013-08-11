@@ -3,4 +3,4 @@
 /// <reference path="reference.ts" />
 
 
-var app = angular.module('demoApp', ['controllers', 'directives']);
+var app = angular.module('demoApp', ['controllers', 'directives','services']);
